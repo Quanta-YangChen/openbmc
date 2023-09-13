@@ -1,0 +1,494 @@
+diff --git a/arch/arm/boot/dts/aspeed-ast2600-evb.dts b/arch/arm/boot/dts/aspeed-ast2600-evb.dts
+index de83c0eb1d6e..9b66849e16d8 100644
+--- a/arch/arm/boot/dts/aspeed-ast2600-evb.dts
++++ b/arch/arm/boot/dts/aspeed-ast2600-evb.dts
+@@ -4,18 +4,19 @@
+ /dts-v1/;
+ 
+ #include "aspeed-g6.dtsi"
+-#include <dt-bindings/gpio/aspeed-gpio.h>
++#include <dt-bindings/gpio/aspeed-gpio.h> 
++#include <dt-bindings/i2c/i2c.h>
+ 
+ / {
+-	model = "AST2600 EVB";
+-	compatible = "aspeed,ast2600-evb", "aspeed,ast2600";
++	model = "Facebook Minerva CMC";
++	compatible = "facebook,minerva-cmc", "aspeed,ast2600";
+ 
+ 	aliases {
+-		serial4 = &uart5;
++		serial5 = &uart5;
+ 	};
+ 
+ 	chosen {
+-		bootargs = "console=ttyS4,115200n8";
++		stdout-path = "serial5:57600n8";
+ 	};
+ 
+ 	memory@80000000 {
+@@ -23,200 +24,170 @@ memory@80000000 {
+ 		reg = <0x80000000 0x80000000>;
+ 	};
+ 
+-	reserved-memory {
+-		#address-cells = <1>;
+-		#size-cells = <1>;
+-		ranges;
+-
+-		video_engine_memory: video {
+-			size = <0x04000000>;
+-			alignment = <0x01000000>;
+-			compatible = "shared-dma-pool";
+-			reusable;
+-		};
+-
+-		gfx_memory: framebuffer {
+-			size = <0x01000000>;
+-			alignment = <0x01000000>;
+-			compatible = "shared-dma-pool";
+-			reusable;
+-		};
+-	};
+-
+-	vcc_sdhci0: regulator-vcc-sdhci0 {
+-		compatible = "regulator-fixed";
+-		regulator-name = "SDHCI0 Vcc";
+-		regulator-min-microvolt = <3300000>;
+-		regulator-max-microvolt = <3300000>;
+-		gpios = <&gpio0 ASPEED_GPIO(V, 0) GPIO_ACTIVE_HIGH>;
+-		enable-active-high;
+-	};
+-
+-	vccq_sdhci0: regulator-vccq-sdhci0 {
+-		compatible = "regulator-gpio";
+-		regulator-name = "SDHCI0 VccQ";
+-		regulator-min-microvolt = <1800000>;
+-		regulator-max-microvolt = <3300000>;
+-		gpios = <&gpio0 ASPEED_GPIO(V, 1) GPIO_ACTIVE_HIGH>;
+-		gpios-states = <1>;
+-		states = <3300000 1>,
+-			 <1800000 0>;
+-	};
+-
+-	vcc_sdhci1: regulator-vcc-sdhci1 {
+-		compatible = "regulator-fixed";
+-		regulator-name = "SDHCI1 Vcc";
+-		regulator-min-microvolt = <3300000>;
+-		regulator-max-microvolt = <3300000>;
+-		gpios = <&gpio0 ASPEED_GPIO(V, 2) GPIO_ACTIVE_HIGH>;
+-		enable-active-high;
+-	};
+-
+-	vccq_sdhci1: regulator-vccq-sdhci1 {
+-		compatible = "regulator-gpio";
+-		regulator-name = "SDHCI1 VccQ";
+-		regulator-min-microvolt = <1800000>;
+-		regulator-max-microvolt = <3300000>;
+-		gpios = <&gpio0 ASPEED_GPIO(V, 3) GPIO_ACTIVE_HIGH>;
+-		gpios-states = <1>;
+-		states = <3300000 1>,
+-			 <1800000 0>;
++	iio-hwmon {
++		compatible = "iio-hwmon";
++		io-channels = <&adc0 0>, <&adc0 1>, <&adc0 2>, <&adc0 3>,
++			<&adc0 4>, <&adc0 5>, <&adc0 6>, <&adc0 7>,
++			<&adc1 2>;
+ 	};
+ };
+ 
+-&mdio0 {
++&uart6 {
+ 	status = "okay";
+-
+-	ethphy0: ethernet-phy@0 {
+-		compatible = "ethernet-phy-ieee802.3-c22";
+-		reg = <0>;
+-	};
+ };
+ 
+-&mdio1 {
++&wdt1 {
+ 	status = "okay";
++	pinctrl-names = "default";
++	pinctrl-0 = <&pinctrl_wdtrst1_default>;
++	aspeed,reset-type = "soc";
++	aspeed,external-signal;
++	aspeed,ext-push-pull;
++	aspeed,ext-active-high;
++	aspeed,ext-pulse-duration = <256>; };
+ 
+-	ethphy1: ethernet-phy@0 {
+-		compatible = "ethernet-phy-ieee802.3-c22";
+-		reg = <0>;
+-	};
++&mac3 {
++	status = "okay";
++	pinctrl-names = "default";
++	pinctrl-0 = <&pinctrl_rmii4_default>;
++	use-ncsi;
++	mlx,multi-host;
+ };
+ 
+-&mdio2 {
++&fmc {
+ 	status = "okay";
+-
+-	ethphy2: ethernet-phy@0 {
+-		compatible = "ethernet-phy-ieee802.3-c22";
+-		reg = <0>;
++	flash@0 {
++		status = "okay";
++		m25p,fast-read;
++		label = "bmc";
++		spi-max-frequency = <50000000>; 
++#include "openbmc-flash-layout-128.dtsi"
++	};
++	flash@1 {
++		status = "okay";
++		m25p,fast-read;
++		label = "alt-bmc";
++		spi-max-frequency = <50000000>;
+ 	};
+ };
+ 
+-&mdio3 {
++&rtc {
+ 	status = "okay";
+-
+-	ethphy3: ethernet-phy@0 {
+-		compatible = "ethernet-phy-ieee802.3-c22";
+-		reg = <0>;
+-	};
+ };
+ 
+-&mac0 {
++&sgpiom1 {
+ 	status = "okay";
+-
+-	phy-mode = "rgmii-rxid";
+-	phy-handle = <&ethphy0>;
+-
+-	pinctrl-names = "default";
+-	pinctrl-0 = <&pinctrl_rgmii1_default>;
++	ngpios = <128>;
++	bus-frequency = <2000000>;
+ };
+ 
+-
+-&mac1 {
++&i2c0 {
+ 	status = "okay";
+ 
+-	phy-mode = "rgmii-rxid";
+-	phy-handle = <&ethphy1>;
++	ina230@40 {
++		compatible = "ti,ina230";
++		reg = <0x40>;
++		shunt-resistor = <2000>;
++	};
++
++	ina230@41 {
++		compatible = "ti,ina230";
++		reg = <0x41>;
++		shunt-resistor = <2000>;
++	};
+ 
+-	pinctrl-names = "default";
+-	pinctrl-0 = <&pinctrl_rgmii2_default>;
+ };
+ 
+-&mac2 {
++&i2c1 {
+ 	status = "okay";
+ 
+-	phy-mode = "rgmii";
+-	phy-handle = <&ethphy2>;
++	temperature-sensor@4B {
++		compatible = "ti,tmp75";
++		reg = <0x4B>;
++	};
+ 
+-	pinctrl-names = "default";
+-	pinctrl-0 = <&pinctrl_rgmii3_default>;
++	eeprom@51 {
++		compatible = "atmel,24c128";
++		reg = <0x51>;
++	};
+ };
+ 
+-&mac3 {
++&i2c2 {
+ 	status = "okay";
+ 
+-	phy-mode = "rgmii";
+-	phy-handle = <&ethphy3>;
+-
+-	pinctrl-names = "default";
+-	pinctrl-0 = <&pinctrl_rgmii4_default>;
+-};
++	i2c-mux@77 {
++		compatible = "nxp,pca9548";
++		reg = <0x77>;
++		#address-cells = <1>;
++		#size-cells = <0>;
++		i2c-mux-idle-disconnect;
++
++		i2c@0 {
++			#address-cells = <1>;
++			#size-cells = <0>;
++			reg = <0>;
++
++			eeprom@50 {
++				compatible = "atmel,24c128";
++				reg = <0x50>;
++			};
++		};
+ 
+-&emmc_controller {
+-	status = "okay";
+-};
++		i2c@1 {
++			#address-cells = <1>;
++			#size-cells = <0>;
++			reg = <1>;
+ 
+-&emmc {
+-	non-removable;
+-	bus-width = <4>;
+-	max-frequency = <100000000>;
+-	clk-phase-mmc-hs200 = <9>, <225>;
+-};
++			eeprom@50 {
++				compatible = "atmel,24c128";
++				reg = <0x50>;
++			};
++		};
+ 
+-&rtc {
+-	status = "okay";
+-};
++		i2c@2 {
++			#address-cells = <1>;
++			#size-cells = <0>;
++			reg = <2>;
+ 
+-&fmc {
+-	status = "okay";
+-	flash@0 {
+-		status = "okay";
+-		m25p,fast-read;
+-		label = "bmc";
+-		spi-rx-bus-width = <4>;
+-		spi-max-frequency = <50000000>;
+-#include "openbmc-flash-layout-64.dtsi"
+-	};
+-};
++			eeprom@50 {
++				compatible = "atmel,24c128";
++				reg = <0x50>;
++			};
++		};
+ 
+-&spi1 {
+-	status = "okay";
+-	pinctrl-names = "default";
+-	pinctrl-0 = <&pinctrl_spi1_default>;
++		i2c@3 {
++			#address-cells = <1>;
++			#size-cells = <0>;
++			reg = <3>;
+ 
+-	flash@0 {
+-		status = "okay";
+-		m25p,fast-read;
+-		label = "pnor";
+-		spi-rx-bus-width = <4>;
+-		spi-max-frequency = <100000000>;
+-	};
+-};
++			eeprom@50 {
++				compatible = "atmel,24c128";
++				reg = <0x50>;
++			};
++		};
+ 
+-&uart5 {
+-	// Workaround for A0
+-	compatible = "snps,dw-apb-uart";
+-};
++		i2c@4 {
++			#address-cells = <1>;
++			#size-cells = <0>;
++			reg = <4>;
+ 
+-&i2c0 {
+-	status = "okay";
+-};
++			eeprom@50 {
++				compatible = "atmel,24c128";
++				reg = <0x50>;
++			};
++		};
+ 
+-&i2c1 {
+-	status = "okay";
+-};
++		i2c@5 {
++			#address-cells = <1>;
++			#size-cells = <0>;
++			reg = <5>;
+ 
+-&i2c2 {
+-	status = "okay";
++			eeprom@50 {
++				compatible = "atmel,24c128";
++				reg = <0x50>;
++			};
++		};
++	};
+ };
+ 
+ &i2c3 {
+@@ -237,114 +208,69 @@ &i2c6 {
+ 
+ &i2c7 {
+ 	status = "okay";
+-
+-	temp@2e {
+-		compatible = "adi,adt7490";
+-		reg = <0x2e>;
+-	};
+-
+-	eeprom@50 {
+-		compatible = "atmel,24c08";
+-		reg = <0x50>;
+-		pagesize = <16>;
+-	};
+ };
+ 
+ &i2c8 {
+ 	status = "okay";
+-
+-	lm75@4d {
+-		compatible = "national,lm75";
+-		reg = <0x4d>;
+-	};
+ };
+ 
+ &i2c9 {
+ 	status = "okay";
+ };
+ 
+-&i2c12 {
++&i2c10 {
+ 	status = "okay";
+ };
+ 
+-&i2c13 {
++&i2c11 {
+ 	status = "okay";
+ };
+ 
+-&i2c14 {
+-	status = "okay";
+-};
+-
+-&i2c15 {
++&i2c12 {
+ 	status = "okay";
+ };
+ 
+-&fsim0 {
++&i2c13 {
+ 	status = "okay";
+ };
+ 
+-&ehci1 {
++&i2c14 {
+ 	status = "okay";
+-};
++	multi-master;
+ 
+-&uhci {
+-	status = "okay";
++	ipmb@10 {
++		compatible = "ipmb-dev";
++		reg = <(0x10 | I2C_OWN_SLAVE_ADDRESS)>;
++		i2c-protocol;
++	};
+ };
+ 
+-&sdc {
++&i2c15 {
+ 	status = "okay";
+-};
+ 
+-/*
+- * The signal voltage of sdhci0 and sdhci1 on AST2600-A2 EVB is able to be
+- * toggled by GPIO pins.
+- * In the reference design, GPIOV0 of AST2600-A2 EVB is connected to the
+- * power load switch that provides 3.3v to sdhci0 vdd, GPIOV1 is connected to
+- * a 1.8v and a 3.3v power load switch that provides signal voltage to
+- * sdhci0 bus.
+- * If GPIOV0 is active high, sdhci0 is enabled, otherwise, sdhci0 is disabled.
+- * If GPIOV1 is active high, 3.3v power load switch is enabled, sdhci0 signal
+- * voltage is 3.3v, otherwise, 1.8v power load switch will be enabled,
+- * sdhci0 signal voltage becomes 1.8v.
+- * AST2600-A2 EVB also supports toggling signal voltage for sdhci1.
+- * The design is the same as sdhci0, it uses GPIOV2 as power-gpio and GPIOV3
+- * as power-switch-gpio.
+- */
+-&sdhci0 {
+-	status = "okay";
+-	bus-width = <4>;
+-	max-frequency = <100000000>;
+-	sdhci-drive-type = /bits/ 8 <3>;
+-	sdhci-caps-mask = <0x7 0x0>;
+-	sdhci,wp-inverted;
+-	vmmc-supply = <&vcc_sdhci0>;
+-	vqmmc-supply = <&vccq_sdhci0>;
+-	clk-phase-sd-hs = <7>, <200>;
++	eeprom@50 {
++		compatible = "atmel,24c128";
++		reg = <0x50>;
++	};
+ };
+ 
+-&sdhci1 {
++&adc0 {
++	ref_voltage = <2500>;
+ 	status = "okay";
+-	bus-width = <4>;
+-	max-frequency = <100000000>;
+-	sdhci-drive-type = /bits/ 8 <3>;
+-	sdhci-caps-mask = <0x7 0x0>;
+-	sdhci,wp-inverted;
+-	vmmc-supply = <&vcc_sdhci1>;
+-	vqmmc-supply = <&vccq_sdhci1>;
+-	clk-phase-sd-hs = <7>, <200>;
+-};
++	pinctrl-0 = <&pinctrl_adc0_default &pinctrl_adc1_default
++		&pinctrl_adc2_default &pinctrl_adc3_default
++		&pinctrl_adc4_default &pinctrl_adc5_default
++		&pinctrl_adc6_default &pinctrl_adc7_default>; };
+ 
+-&vhub {
++&adc1 {
++	ref_voltage = <2500>;
+ 	status = "okay";
+-	pinctrl-names = "default";
+-};
++	pinctrl-0 = <&pinctrl_adc10_default>; };
+ 
+-&video {
++&ehci1 {
+ 	status = "okay";
+-	memory-region = <&video_engine_memory>;
+ };
+ 
+-&gfx {
++&uhci {
+ 	status = "okay";
+-	memory-region = <&gfx_memory>;
+ };
