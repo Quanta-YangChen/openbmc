@@ -1,0 +1,61 @@
+{
+    "Exposes": [
+        {
+            "Address": "0x4b",
+            "Bus": 1,
+            "Name": "Remote_Temp",
+            "Thresholds": [
+                {
+                    "Direction": "greater than",
+                    "Name": "upper critical",
+                    "Severity": 1,
+                    "Value": 80
+                },
+                {
+                    "Direction": "greater than",
+                    "Name": "upper non critical",
+                    "Severity": 0,
+                    "Value": 75
+                },
+                {
+                    "Direction": "less than",
+                    "Name": "lower non critical",
+                    "Severity": 0,
+                    "Value": 5
+                },
+                {
+                    "Direction": "less than",
+                    "Name": "lower critical",
+                    "Severity": 1,
+                    "Value": 0
+                }
+            ],
+            "Type": "TMP75"
+        },
+        {
+            "Address": "0x40",
+            "Bus": 0,
+            "Labels": [
+                "in1",
+                "curr1",
+                "power1"
+            ],
+            "Name": "P24V_AUX_INA230",
+            "Type": "INA230"
+        },
+        {
+            "Address": "0x41",
+            "Bus": 0,
+            "Labels": [
+                "in1",
+                "curr1",
+                "power1"
+            ],
+            "Name": "P12V_AUX_INA230",
+            "Type": "INA230"
+        }
+    ],
+    "Name": "Minerva CMC",
+    "Probe": "TRUE",
+    "Type": "Board"
+}

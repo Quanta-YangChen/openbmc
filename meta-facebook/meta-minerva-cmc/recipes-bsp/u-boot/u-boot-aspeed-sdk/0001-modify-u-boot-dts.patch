@@ -1,0 +1,31 @@
+diff --git a/arch/arm/dts/ast2600-evb.dts b/arch/arm/dts/ast2600-evb.dts
+index 6db1efdda5..209f0ef04b 100644
+--- a/arch/arm/dts/ast2600-evb.dts
++++ b/arch/arm/dts/ast2600-evb.dts
+@@ -124,22 +124,15 @@
+ 	flash@0 {
+ 		status = "okay";
+ 		spi-max-frequency = <50000000>;
+-		spi-tx-bus-width = <4>;
+-		spi-rx-bus-width = <4>;
++		spi-tx-bus-width = <2>;
++		spi-rx-bus-width = <2>;
+ 	};
+ 
+ 	flash@1 {
+ 		status = "okay";
+ 		spi-max-frequency = <50000000>;
+-		spi-tx-bus-width = <4>;
+-		spi-rx-bus-width = <4>;
+-	};
+-
+-	flash@2 {
+-		status = "disabled";
+-		spi-max-frequency = <50000000>;
+-		spi-tx-bus-width = <4>;
+-		spi-rx-bus-width = <4>;
++		spi-tx-bus-width = <2>;
++		spi-rx-bus-width = <2>;
+ 	};
+ };
+ 
