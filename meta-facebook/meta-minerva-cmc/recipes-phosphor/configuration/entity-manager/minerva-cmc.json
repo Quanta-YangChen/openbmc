@@ -1,6 +1,66 @@
 {
     "Exposes": [
         {
+            "Index": 0,
+            "Name": "P12V_AUX",
+            "ScaleFactor": 0.11236,
+            "Type": "ADC"
+        },
+        {
+            "Index": 1,
+            "Name": "P5V_AUX",
+            "ScaleFactor": 0.271739,
+            "Type": "ADC"
+        },
+        {
+            "Index": 2,
+            "Name": "P3V3_AUX",
+            "ScaleFactor": 0.410678,
+            "Type": "ADC"
+        },
+        {
+            "Index": 3,
+            "Name": "P2V5_AUX",
+            "ScaleFactor": 0.542005,
+            "Type": "ADC"
+        },
+        {
+            "Index": 4,
+            "Name": "P1V8_AUX",
+            "ScaleFactor": 0.750469,
+            "Type": "ADC"
+        },
+        {
+            "Index": 5,
+            "Name": "PBPPA_BMC_AUX",
+            "ScaleFactor": 0.410678,
+            "Type": "ADC"
+        },
+        {
+            "Index": 6,
+            "Name": "P1V2_AUX",
+            "Type": "ADC"
+        },
+        {
+            "BridgeGpio": [
+                {
+                    "Name": "BAT_DETECT",
+                    "Polarity": "High",
+                    "SetupTime": 1
+                }
+            ],
+            "Index": 7,
+            "Name": "P3V_BAT",
+            "PollRate": 86400,
+            "ScaleFactor": 0.333333,
+            "Type": "ADC"
+        },
+        {
+            "Index": 10,
+            "Name": "P1V0_AUX",
+            "Type": "ADC"
+        },
+        {
             "Address": "0x4b",
             "Bus": 1,
             "Name": "Remote_Temp",
