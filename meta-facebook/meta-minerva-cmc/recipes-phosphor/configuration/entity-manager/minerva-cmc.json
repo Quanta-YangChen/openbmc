@@ -53,6 +53,28 @@
             ],
             "Name": "P12V_AUX_INA230",
             "Type": "INA230"
+        },
+        {
+            "Address": "0x67",
+            "Bus": 0,
+            "Labels": [
+                "in1",
+                "curr1",
+                "power1"
+            ],
+            "Name": "P48V_SENSE",
+            "Type": "LTC2945"
+        },
+        {
+            "Address": "0x68",
+            "Bus": 0,
+            "Labels": [
+                "in1",
+                "curr1",
+                "power1"
+            ],
+            "Name": "GND_SENSE",
+            "Type": "LTC2945"
         }
     ],
     "Name": "Minerva CMC",
