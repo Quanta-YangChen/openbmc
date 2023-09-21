@@ -1,0 +1,12 @@
+diff --git a/src/PSUSensorMain.cpp b/src/PSUSensorMain.cpp
+index 663567dc..71dd27ef 100644
+--- a/src/PSUSensorMain.cpp
++++ b/src/PSUSensorMain.cpp
+@@ -96,6 +96,7 @@ static const I2CDeviceTypeMap sensorTypes{
+     {"XDPE11280", I2CDeviceType{"xdpe11280", true}},
+     {"XDPE12284", I2CDeviceType{"xdpe12284", true}},
+     {"XDPE152C4", I2CDeviceType{"xdpe152c4", true}},
++    {"LTC2945", I2CDeviceType{"ltc2945", true}},
+ };
+ 
+ enum class DevTypes
