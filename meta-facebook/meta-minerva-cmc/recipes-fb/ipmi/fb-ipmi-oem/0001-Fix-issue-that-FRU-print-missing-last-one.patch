@@ -1,0 +1,22 @@
+From 70e087e3ba5fddfd92cc8688932578150c9012ed Mon Sep 17 00:00:00 2001
+From: Eason Chen <EasonChen1@quantatw.com>
+Date: Fri, 22 Sep 2023 02:05:03 +0000
+Subject: [PATCH] Fix issue that FRU print missing last one
+
+---
+ src/storagecommands.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/storagecommands.cpp b/src/storagecommands.cpp
+index d64531e..c549af3 100644
+--- a/src/storagecommands.cpp
++++ b/src/storagecommands.cpp
+@@ -642,7 +642,7 @@ ipmi_ret_t ipmiStorageGetSDR(ipmi_netfn_t netfn, ipmi_cmd_t cmd,
+         return IPMI_CC_INVALID_FIELD_REQUEST;
+     }
+ 
+-    uint16_t nextRecord = lastRecord > static_cast<size_t>(req->recordID + 1)
++    uint16_t nextRecord = lastRecord >= static_cast<size_t>(req->recordID + 1)
+                               ? req->recordID + 1
+                               : 0XFFFF;
+ 
