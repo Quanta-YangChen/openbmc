@@ -1,13 +1,11 @@
-diff --git a/arch/arm/boot/dts/aspeed-ast2600-evb.dts b/arch/arm/boot/dts/aspeed-ast2600-evb.dts
-index de83c0eb1d6e..9b66849e16d8 100644
---- a/arch/arm/boot/dts/aspeed-ast2600-evb.dts
-+++ b/arch/arm/boot/dts/aspeed-ast2600-evb.dts
-@@ -4,18 +4,19 @@
- /dts-v1/;
+diff --git a/arch/arm/boot/dts/aspeed/aspeed-ast2600-evb.dts b/arch/arm/boot/dts/aspeed/aspeed-ast2600-evb.dts
+index de83c0eb1d6e..2ced3a572358 100644
+--- a/arch/arm/boot/dts/aspeed/aspeed-ast2600-evb.dts
++++ b/arch/arm/boot/dts/aspeed/aspeed-ast2600-evb.dts
+@@ -5,17 +5,18 @@
  
  #include "aspeed-g6.dtsi"
--#include <dt-bindings/gpio/aspeed-gpio.h>
-+#include <dt-bindings/gpio/aspeed-gpio.h> 
+ #include <dt-bindings/gpio/aspeed-gpio.h>
 +#include <dt-bindings/i2c/i2c.h>
  
  / {
@@ -141,7 +139,7 @@ index de83c0eb1d6e..9b66849e16d8 100644
 +		status = "okay";
 +		m25p,fast-read;
 +		label = "bmc";
-+		spi-max-frequency = <50000000>; 
++		spi-max-frequency = <50000000>;
 +#include "openbmc-flash-layout-128.dtsi"
 +	};
 +	flash@1 {
@@ -204,9 +202,9 @@ index de83c0eb1d6e..9b66849e16d8 100644
  
 -	phy-mode = "rgmii";
 -	phy-handle = <&ethphy2>;
-+	temperature-sensor@4B {
++	temperature-sensor@4b {
 +		compatible = "ti,tmp75";
-+		reg = <0x4B>;
++		reg = <0x4b>;
 +	};
  
 -	pinctrl-names = "default";
@@ -391,25 +389,25 @@ index de83c0eb1d6e..9b66849e16d8 100644
  };
  
 -&i2c14 {
--	status = "okay";
--};
--
--&i2c15 {
 +&i2c12 {
  	status = "okay";
  };
  
--&fsim0 {
+-&i2c15 {
 +&i2c13 {
  	status = "okay";
  };
  
--&ehci1 {
+-&fsim0 {
 +&i2c14 {
  	status = "okay";
 -};
 +	multi-master;
  
+-&ehci1 {
+-	status = "okay";
+-};
+-
 -&uhci {
 -	status = "okay";
 +	ipmb@10 {
