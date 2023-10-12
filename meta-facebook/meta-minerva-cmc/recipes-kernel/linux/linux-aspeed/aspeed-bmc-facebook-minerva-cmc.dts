@@ -87,6 +87,18 @@
 
 &i2c0 {
 	status = "okay";
+
+	ina230@40 {
+		compatible = "ti,ina230";
+		reg = <0x40>;
+		shunt-resistor = <1000>;
+	};
+
+	ina230@41 {
+		compatible = "ti,ina230";
+		reg = <0x41>;
+		shunt-resistor = <1000>;
+	};
 };
 
 &i2c1 {
