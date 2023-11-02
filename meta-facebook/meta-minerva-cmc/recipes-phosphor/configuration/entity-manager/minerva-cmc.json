@@ -56,7 +56,7 @@
             "Type": "ADC"
         },
         {
-            "Index": 10,
+            "Index": 8,
             "Name": "P1V0_AUX",
             "Type": "ADC"
         },
@@ -135,6 +135,18 @@
             ],
             "Name": "GND_SENSE",
             "Type": "LTC2945"
+        },
+        {
+            "Address": "0x44",
+            "Bus": 0,
+            "Labels": [
+                "vin",
+                "vout1",
+                "iout1",
+                "pin"
+            ],
+            "Name": "HSC",
+            "Type": "LTC4287"
         }
     ],
     "Name": "Minerva CMC",

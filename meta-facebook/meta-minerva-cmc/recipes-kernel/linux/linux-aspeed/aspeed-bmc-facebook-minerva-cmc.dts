@@ -12,6 +12,13 @@
 
 	aliases {
 		serial5 = &uart5;
+
+		i2c20 = &fcb_top_1;
+		i2c21 = &fcb_top_0;
+		i2c22 = &fcb_mid_1;
+		i2c23 = &fcb_mid_0;
+		i2c24 = &fcb_bot_1;
+		i2c25 = &fcb_bot_0;
 	};
 
 	chosen {
@@ -79,7 +86,7 @@
 	status = "okay";
 };
 
-&sgpiom1 {
+&sgpiom0 {
 	status = "okay";
 	ngpios = <128>;
 	bus-frequency = <2000000>;
@@ -99,6 +106,12 @@
 		reg = <0x41>;
 		shunt-resistor = <1000>;
 	};
+
+	ltc4287@44 {
+		compatible = "lltc,ltc4287";
+		reg = <0x44>;
+		rsense-micro-ohms = <2000>;
+	};
 };
 
 &i2c1 {
@@ -109,9 +122,9 @@
 		reg = <0x4b>;
 	};
 
-	eeprom@51 {
+	eeprom@54 {
 		compatible = "atmel,24c128";
-		reg = <0x51>;
+		reg = <0x54>;
 	};
 };
 
@@ -125,7 +138,7 @@
 		#size-cells = <0>;
 		i2c-mux-idle-disconnect;
 
-		i2c@0 {
+		fcb_top_1: i2c@0 {
 			#address-cells = <1>;
 			#size-cells = <0>;
 			reg = <0>;
@@ -136,7 +149,7 @@
 			};
 		};
 
-		i2c@1 {
+		fcb_top_0: i2c@1 {
 			#address-cells = <1>;
 			#size-cells = <0>;
 			reg = <1>;
@@ -147,7 +160,7 @@
 			};
 		};
 
-		i2c@2 {
+		fcb_mid_1: i2c@2 {
 			#address-cells = <1>;
 			#size-cells = <0>;
 			reg = <2>;
@@ -158,7 +171,7 @@
 			};
 		};
 
-		i2c@3 {
+		fcb_mid_0: i2c@3 {
 			#address-cells = <1>;
 			#size-cells = <0>;
 			reg = <3>;
@@ -169,7 +182,7 @@
 			};
 		};
 
-		i2c@4 {
+		fcb_bot_1: i2c@4 {
 			#address-cells = <1>;
 			#size-cells = <0>;
 			reg = <4>;
@@ -180,7 +193,7 @@
 			};
 		};
 
-		i2c@5 {
+		fcb_bot_0: i2c@5 {
 			#address-cells = <1>;
 			#size-cells = <0>;
 			reg = <5>;
@@ -308,4 +321,17 @@
 	/*X0-X7*/	"","","","","","","","",
 	/*Y0-Y7*/	"","","","","","","","",
 	/*Z0-Z7*/	"","","","","","","","";
+};
+
+&i3c0 {
+	status = "okay";
+};
+
+&i3c1 {
+	status = "okay";
+
+	eeprom@50 {
+		compatible = "eeprom";
+		reg = <0x50 0x0 0x0>;
+	};
 };

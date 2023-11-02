@@ -2,6 +2,8 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/linux-aspeed:"
 SRC_URI += " \
     file://minerva-cmc.cfg \
     file://aspeed-bmc-facebook-minerva-cmc.dts \
+    file://0001-Support-LTC4286.patch \
+    file://0002-i3c-support.patch \
 "
 
 do_configure:append(){
