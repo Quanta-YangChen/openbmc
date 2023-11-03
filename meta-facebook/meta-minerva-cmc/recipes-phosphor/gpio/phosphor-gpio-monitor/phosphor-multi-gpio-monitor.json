@@ -1,0 +1,13 @@
+[
+    {
+        "Name": "PRSNT_FCB_MIDDLE_1_N",
+        "ChipId": "2",
+        "GpioNum": 50,
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-present@FCB_MIDDLE_1.service"],
+            "RISING": ["blade-not-present@FCB_MIDDLE_1.service"]
+        },
+        "Continue": true
+    }
+]
