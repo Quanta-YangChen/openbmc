@@ -1,0 +1,85 @@
+#!/bin/sh
+# ------------------------SGPIO settings------------------------>
+# SGPIO Output 50(101)
+FM_SGPIO_CMM_AC_CYCLE_N_R1=101
+/usr/bin/gpioset 2 $FM_SGPIO_CMM_AC_CYCLE_N_R1=1
+
+# SGPIO Output 51(103)
+MGMT_SFP_TX_DIS_R=103
+/usr/bin/gpioset 2 $MGMT_SFP_TX_DIS_R=1
+
+# SGPIO Output 53(107)
+RST_I2CRST_MTIA_BLADE0_1_N_R=107
+/usr/bin/gpioset 2 $RST_I2CRST_MTIA_BLADE0_1_N_R=1
+
+# SGPIO Output 54(109)
+RST_I2CRST_MTIA_BLADE2_3_N_R=109
+/usr/bin/gpioset 2 $RST_I2CRST_MTIA_BLADE2_3_N_R=1
+
+# SGPIO Output 55(111)
+RST_I2CRST_MTIA_BLADE4_5_N_R=111
+/usr/bin/gpioset 2 $RST_I2CRST_MTIA_BLADE4_5_N_R=1
+
+# SGPIO Output 56(113)
+RST_I2CRST_MTIA_BLADE6_7_N_R=113
+/usr/bin/gpioset 2 $RST_I2CRST_MTIA_BLADE6_7_N_R=1
+
+# SGPIO Output 57(115)
+RST_I2CRST_MTIA_BLADE8_9_N_R=115
+/usr/bin/gpioset 2 $RST_I2CRST_MTIA_BLADE8_9_N_R=1
+
+# SGPIO Output 58(117)
+RST_I2CRST_MTIA_BLADE10_11_N_R=117
+/usr/bin/gpioset 2 $RST_I2CRST_MTIA_BLADE10_11_N_R=1
+
+# SGPIO Output 59(119)
+RST_I2CRST_MTIA_BLADE12_13_N_R=119
+/usr/bin/gpioset 2 $RST_I2CRST_MTIA_BLADE12_13_N_R=1
+
+# SGPIO Output 60(121)
+RST_I2CRST_MTIA_BLADE14_15_N_R=121
+/usr/bin/gpioset 2 $RST_I2CRST_MTIA_BLADE14_15_N_R=1
+
+# SGPIO Output 61(123)
+RST_I2CRST_NW_BLADE0_1_2_N_R=123
+/usr/bin/gpioset 2 $RST_I2CRST_NW_BLADE0_1_2_N_R=1
+
+# SGPIO Output 62(125)
+RST_I2CRST_NW_BLADE3_4_5_N_R=125
+/usr/bin/gpioset 2 $RST_I2CRST_NW_BLADE3_4_5_N_R=1
+
+# SGPIO Output 63(127)
+RST_I2CRST_FCB_N_R=127
+/usr/bin/gpioset 2 $RST_I2CRST_FCB_N_R=1
+
+# SGPIO Output 64(129)
+RST_I2CRST_FCB_B_L_N_R=129
+/usr/bin/gpioset 2 $RST_I2CRST_FCB_B_L_N_R=1
+
+# SGPIO Output 65(131)
+RST_I2CRST_FCB_B_R_N_R=131
+/usr/bin/gpioset 2 $RST_I2CRST_FCB_B_R_N_R=1
+
+# SGPIO Output 66(133)
+RST_I2CRST_FCB_M_L_N_R=133
+/usr/bin/gpioset 2 $RST_I2CRST_FCB_M_L_N_R=1
+
+# SGPIO Output 67(135)
+RST_I2CRST_FCB_M_R_N_R=135
+/usr/bin/gpioset 2 $RST_I2CRST_FCB_M_R_N_R=1
+
+# SGPIO Output 68(137)
+RST_I2CRST_FCB_T_L_N_R=137
+/usr/bin/gpioset 2 $RST_I2CRST_FCB_T_L_N_R=1
+
+# SGPIO Output 69(139)
+RST_I2CRST_FCB_T_R_N_R=139
+/usr/bin/gpioset 2 $RST_I2CRST_FCB_T_R_N_R=1
+
+# SGPIO Output 71(143)
+88E6393X_BIN_UPDATE_EN_N=143
+/usr/bin/gpioset 2 $88E6393X_BIN_UPDATE_EN_N=1
+
+# SGPIO Output 70(141)
+BMC_SGPIO_READY=141
+/usr/bin/gpioset 2 $BMC_SGPIO_READY=1
