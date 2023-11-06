@@ -149,7 +149,7 @@
             "Type": "LTC4287"
         }
     ],
-    "Name": "Minerva CMC",
+    "Name": "Minerva CMM",
     "Probe": "TRUE",
     "Type": "Board"
 }

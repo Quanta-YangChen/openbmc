@@ -14,7 +14,7 @@
 #
 # Machine Selection
 #
-MACHINE ??= "minerva-cmc"
+MACHINE ??= "minerva-cmm"
 
 #
 # Where to place downloads

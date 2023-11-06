@@ -15,5 +15,5 @@ BBLAYERS ?= " \
   ##OEROOT##/meta-phosphor \
   ##OEROOT##/meta-aspeed \
   ##OEROOT##/meta-facebook \
-  ##OEROOT##/meta-facebook/meta-minerva-cmc \
+  ##OEROOT##/meta-facebook/meta-minerva-cmm \
   "
