@@ -4,9 +4,18 @@
 FM_SGPIO_CMM_AC_CYCLE_N_R1=101
 /usr/bin/gpioset 2 $FM_SGPIO_CMM_AC_CYCLE_N_R1=1
 
+# if MGMT_SFP_PRSNT_N_R = 0 -> MGMT_SFP_TX_DIS_R = 0
+# if MGMT_SFP_PRSNT_N_R = 1 -> MGMT_SFP_TX_DIS_R = 1
+# SGPIO Input 119(238)
+MGMT_SFP_PRSNT_N_R=238
 # SGPIO Output 51(103)
 MGMT_SFP_TX_DIS_R=103
-/usr/bin/gpioset 2 $MGMT_SFP_TX_DIS_R=1
+MGMT_SFP_PRSNT_N_R_VALUE=$(/usr/bin/gpioget 2 $MGMT_SFP_PRSNT_N_R)
+if [ "$MGMT_SFP_PRSNT_N_R_VALUE" -eq 0 ]; then
+    /usr/bin/gpioset 2 $MGMT_SFP_TX_DIS_R=0
+else
+    /usr/bin/gpioset 2 $MGMT_SFP_TX_DIS_R=1
+fi
 
 # SGPIO Output 53(107)
 RST_I2CRST_MTIA_BLADE0_1_N_R=107
@@ -77,8 +86,8 @@ RST_I2CRST_FCB_T_R_N_R=139
 /usr/bin/gpioset 2 $RST_I2CRST_FCB_T_R_N_R=1
 
 # SGPIO Output 71(143)
-88E6393X_BIN_UPDATE_EN_N=143
-/usr/bin/gpioset 2 $88E6393X_BIN_UPDATE_EN_N=1
+BIN_UPDATE_88E6393X_EN_N=143
+/usr/bin/gpioset 2 $BIN_UPDATE_88E6393X_EN_N=1
 
 # SGPIO Output 70(141)
 BMC_SGPIO_READY=141

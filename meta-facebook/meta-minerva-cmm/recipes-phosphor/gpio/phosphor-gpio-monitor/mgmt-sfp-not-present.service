@@ -1,0 +1,6 @@
+[Unit]
+Description= record mgmt SFP is not present
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/phosphor-gpio-monitor/mgmt_sfp_present.sh 1

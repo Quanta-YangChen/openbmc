@@ -3,4 +3,5 @@ OBMC_IMAGE_EXTRA_INSTALL:append = " \
     fb-ipmi-oem \
     phosphor-sel-logger \
     obmc-console \
+    phosphor-gpio-monitor \
 "

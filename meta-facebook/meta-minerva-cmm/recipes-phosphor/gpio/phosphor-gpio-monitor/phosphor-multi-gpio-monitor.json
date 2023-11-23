@@ -9,5 +9,16 @@
             "RISING": ["blade-not-present@FCB_MIDDLE_1.service"]
         },
         "Continue": true
+    },
+    {
+        "Name": "MGMT_SFP_PRSNT_N_R",
+        "ChipId": "2",
+        "GpioNum": 238,
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["mgmt-sfp-present.service"],
+            "RISING": ["mgmt-sfp-not-present.service"]
+        },
+        "Continue": true
     }
 ]
