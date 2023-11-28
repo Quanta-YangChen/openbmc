@@ -1,0 +1,28 @@
+#!/bin/sh
+
+PERSIST=/run/mnt-persist
+
+if [ ! -d $PERSIST ]; then
+    exit 0
+fi
+
+mount_folder() {
+    if [ ! -d "$1" ]; then
+        echo "The folder $1 doesn't exist, mount failed"
+        return
+    fi
+
+    if [ ! -d $PERSIST/"$1"-data ]; then
+        mkdir -p $PERSIST/"$1"-data
+    fi
+
+    if [ ! -d $PERSIST/"$1"-work ]; then
+        mkdir -p $PERSIST/"$1"-work
+    fi
+
+    mount overlay /"$1" -t overlay -o \
+        lowerdir=/"$1",upperdir=$PERSIST/"$1"-data,workdir=$PERSIST/"$1"-work
+}
+
+# Create /mnt/data
+mount_folder "/mnt/data"
