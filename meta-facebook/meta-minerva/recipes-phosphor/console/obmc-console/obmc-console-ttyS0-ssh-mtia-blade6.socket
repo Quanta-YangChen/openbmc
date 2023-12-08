@@ -1,0 +1,10 @@
+[Unit]
+Description=Phosphor BMC Console SSH socket for MTIA Blade 6
+Wants=obmc-console@ttyS0.service
+
+[Socket]
+ListenStream=2206
+Accept=yes
+
+[Install]
+WantedBy=sockets.target
