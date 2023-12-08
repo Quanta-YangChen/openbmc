@@ -14,3 +14,12 @@ OBMC_IMAGE_EXTRA_INSTALL:append = " \
 OBMC_IMAGE_EXTRA_INSTALL:append = " \
     obmc-console \
 "
+
+OBMC_IMAGE_EXTRA_INSTALL:append = " \
+    ipmitool \
+    fb-ipmi-oem \
+    phosphor-sel-logger \
+    phosphor-ipmi-ipmb \
+    obmc-phosphor-buttons-signals \
+    obmc-phosphor-buttons-handler \
+"
