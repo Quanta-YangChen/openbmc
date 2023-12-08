@@ -1,0 +1,97 @@
+#!/bin/sh
+# shellcheck source=meta-facebook/meta-minerva/recipes-minerva/plat-tool/files/minerva-common-functions
+source /usr/libexec/minerva-common-functions
+
+uart_mux_select()
+{
+    local BLADE_INDEX=$1
+    if [ "$BLADE_INDEX" = 0 ]; then
+        set_gpio BLADE_UART_SEL0 0
+        set_gpio BLADE_UART_SEL1 0
+        set_gpio BLADE_UART_SEL2 0
+        set_gpio BLADE_UART_SEL3 0
+    elif [ "$BLADE_INDEX" = 1 ]; then
+        set_gpio BLADE_UART_SEL0 1
+        set_gpio BLADE_UART_SEL1 0
+        set_gpio BLADE_UART_SEL2 0
+        set_gpio BLADE_UART_SEL3 0
+    elif [ "$BLADE_INDEX" = 2 ]; then
+        set_gpio BLADE_UART_SEL0 0
+        set_gpio BLADE_UART_SEL1 1
+        set_gpio BLADE_UART_SEL2 0
+        set_gpio BLADE_UART_SEL3 0
+    elif [ "$BLADE_INDEX" = 3 ]; then
+        set_gpio BLADE_UART_SEL0 1
+        set_gpio BLADE_UART_SEL1 1
+        set_gpio BLADE_UART_SEL2 0
+        set_gpio BLADE_UART_SEL3 0
+    elif [ "$BLADE_INDEX" = 4 ]; then
+        set_gpio BLADE_UART_SEL0 0
+        set_gpio BLADE_UART_SEL1 0
+        set_gpio BLADE_UART_SEL2 1
+        set_gpio BLADE_UART_SEL3 0
+    elif [ "$BLADE_INDEX" = 5 ]; then
+        set_gpio BLADE_UART_SEL0 1
+        set_gpio BLADE_UART_SEL1 0
+        set_gpio BLADE_UART_SEL2 1
+        set_gpio BLADE_UART_SEL3 0
+    elif [ "$BLADE_INDEX" = 6 ]; then
+        set_gpio BLADE_UART_SEL0 0
+        set_gpio BLADE_UART_SEL1 1
+        set_gpio BLADE_UART_SEL2 1
+        set_gpio BLADE_UART_SEL3 0
+    elif [ "$BLADE_INDEX" = 7 ]; then
+        set_gpio BLADE_UART_SEL0 1
+        set_gpio BLADE_UART_SEL1 1
+        set_gpio BLADE_UART_SEL2 1
+        set_gpio BLADE_UART_SEL3 0
+    elif [ "$BLADE_INDEX" = 8 ]; then
+        set_gpio BLADE_UART_SEL0 0
+        set_gpio BLADE_UART_SEL1 0
+        set_gpio BLADE_UART_SEL2 0
+        set_gpio BLADE_UART_SEL3 1
+    elif [ "$BLADE_INDEX" = 9 ]; then
+        set_gpio BLADE_UART_SEL0 1
+        set_gpio BLADE_UART_SEL1 0
+        set_gpio BLADE_UART_SEL2 0
+        set_gpio BLADE_UART_SEL3 1
+    elif [ "$BLADE_INDEX" = 10 ]; then
+        set_gpio BLADE_UART_SEL0 0
+        set_gpio BLADE_UART_SEL1 1
+        set_gpio BLADE_UART_SEL2 0
+        set_gpio BLADE_UART_SEL3 1
+    elif [ "$BLADE_INDEX" = 11 ]; then
+        set_gpio BLADE_UART_SEL0 1
+        set_gpio BLADE_UART_SEL1 1
+        set_gpio BLADE_UART_SEL2 0
+        set_gpio BLADE_UART_SEL3 1
+    elif [ "$BLADE_INDEX" = 12 ]; then
+        set_gpio BLADE_UART_SEL0 0
+        set_gpio BLADE_UART_SEL1 0
+        set_gpio BLADE_UART_SEL2 1
+        set_gpio BLADE_UART_SEL3 1
+    elif [ "$BLADE_INDEX" = 13 ]; then
+        set_gpio BLADE_UART_SEL0 1
+        set_gpio BLADE_UART_SEL1 0
+        set_gpio BLADE_UART_SEL2 1
+        set_gpio BLADE_UART_SEL3 1
+    elif [ "$BLADE_INDEX" = 14 ]; then
+        set_gpio BLADE_UART_SEL0 0
+        set_gpio BLADE_UART_SEL1 1
+        set_gpio BLADE_UART_SEL2 1
+        set_gpio BLADE_UART_SEL3 1
+    elif [ "$BLADE_INDEX" = 15 ]; then
+        set_gpio BLADE_UART_SEL0 1
+        set_gpio BLADE_UART_SEL1 1
+        set_gpio BLADE_UART_SEL2 1
+        set_gpio BLADE_UART_SEL3 1
+    else
+        echo "uart_mux_select: unknow blade index ($BLADE_INDEX)"
+        return 1
+    fi
+
+    return 0
+}
+
+BLADE_INDEX=$1
+uart_mux_select $BLADE_INDEX
