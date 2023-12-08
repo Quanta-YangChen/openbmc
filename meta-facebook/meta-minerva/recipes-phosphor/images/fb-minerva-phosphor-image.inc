@@ -4,4 +4,5 @@ OBMC_IMAGE_EXTRA_INSTALL:append = " \
     phosphor-sel-logger \
     obmc-console \
     phosphor-gpio-monitor \
+    plat-svc \
 "
