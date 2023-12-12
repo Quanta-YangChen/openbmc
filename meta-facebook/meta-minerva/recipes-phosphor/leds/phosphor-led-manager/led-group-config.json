@@ -1,31 +1,10 @@
 {
     "leds": [
         {
-            "group" : "bmc_booted",
-            "members" : [
-                {
-                    "Name" : "bmc_heartbeat_amber",
-                    "Action" : "Blink",
-                    "DutyOn" : 50,
-                    "Period" : 1000
-                }
-            ]
-        },
-        {
-            "group": "power_on",
-            "members": [
-                {
-                    "Name": "power_blue",
-                    "Action": "On",
-                    "Priority": "On"
-                }
-            ]
-        },
-        {
             "group": "enclosure_identify",
             "members": [
                 {
-                    "Name": "fp_id_amber",
+                    "Name": "led_fp_id",
                     "Action": "Blink",
                     "DutyOn": 50,
                     "Period": 250
@@ -33,14 +12,34 @@
             ]
         },
         {
+            "group": "power_on",
+            "members": [
+                {
+                    "Name": "led_power_on",
+                    "Action": "On",
+                    "Priority": "On"
+                }
+            ]
+        },
+        {
+            "group" : "bmc_booted",
+            "members" : [
+                {
+                    "Name" : "led_bmc_heartbeat",
+                    "Action" : "Blink",
+                    "DutyOn" : 50,
+                    "Period" : 1000
+                }
+            ]
+        },
+        {
             "group": "fan_fault",
             "members": [
                 {
-                    "Name": "fan_fault_amber",
+                    "Name": "led_fan_fault",
                     "Action": "On"
                 }
             ]
         }
-
     ]
 }

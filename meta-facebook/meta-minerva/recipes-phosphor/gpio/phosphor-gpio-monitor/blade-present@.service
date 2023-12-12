@@ -1,0 +1,6 @@
+[Unit]
+Description=record blade:%i present
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/phosphor-gpio-monitor/record_blade_present_log.sh 0 %i
