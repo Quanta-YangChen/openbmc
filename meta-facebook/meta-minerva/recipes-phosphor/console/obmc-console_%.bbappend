@@ -4,6 +4,8 @@ OBMC_CONSOLE_TTYS = "ttyS0"
 OBMC_CONSOLE_INST_CNT = "16"
 OBMC_CONSOLE_INST = "${@' '.join(['{}'.format(i) for i in range(int(OBMC_CONSOLE_INST_CNT))])}"
 
+RDEPENDS:${PN} += "bash"
+
 SRC_URI:append = " file://server.ttyS0.conf \
                    file://client.2200.conf \
                    file://select-uart-mux"
@@ -27,18 +29,15 @@ SYSTEMD_SERVICE:${PN}:remove = "obmc-console-ssh@.service"
 PACKAGECONFIG:append = " concurrent-servers"
 
 do_install:append() {
-        # Install the server configuration
+        # Install the server configuration, service and socket
         install -m 0755 -d ${D}${sysconfdir}/${BPN}
         install -m 0644 ${WORKDIR}/*.conf ${D}${sysconfdir}/${BPN}/
-        # Remove upstream-provided server configuration
-        rm -f ${D}${sysconfdir}/${BPN}/server.ttyVUART0.conf
-}
-
-do_install:append() {
         install -m 0644 ${WORKDIR}/${BPN}-ttyS0-ssh-mtia-blade*@.service ${D}${systemd_system_unitdir}
         install -m 0644 ${WORKDIR}/${BPN}-ttyS0-ssh-mtia-blade*.socket ${D}${systemd_system_unitdir}
         install -m 0744 ${WORKDIR}/select-uart-mux ${D}${bindir}
 
+        # Remove upstream-provided server configuration
+        rm -f ${D}${sysconfdir}/${BPN}/server.ttyVUART0.conf
         rm -rf ${D}${systemd_system_unitdir}/obmc-console-ssh@.service.d/
         rm -f ${D}${systemd_system_unitdir}/${BPN}-ssh@.service
         rm -f ${D}${systemd_system_unitdir}/${BPN}-ssh.socket

@@ -1,0 +1,13 @@
+{
+    "leds": [
+        {
+            "group": "fan_fault",
+            "members": [
+                {
+                    "Name": "fan_fault_led",
+                    "Action": "On"
+                }
+            ]
+        }
+    ]
+}

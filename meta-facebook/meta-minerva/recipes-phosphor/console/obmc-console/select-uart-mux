@@ -1,24 +1,6 @@
-#!/bin/sh
-
-set_gpio()
-{
-    local NET_NAME=$1
-    local OUT_VAL=$2
-    mapfile -t -d " " GPIO_INFO < <(gpiofind "$NET_NAME")
-    if [ "${#GPIO_INFO[@]}" -ne 2 ]; then
-        echo "set_gpio: can not find gpio, $NET_NAME"
-        return 1
-    fi
-
-    echo -n "set_gpio: set $NET_NAME = $OUT_VAL"
-    if ! gpioset "${GPIO_INFO[0]}" "${GPIO_INFO[1]%$'\n'}"="$OUT_VAL"; then
-        echo " failed"
-        return 1
-    fi
-
-    echo " success"
-    return 0
-}
+#!/bin/bash -e
+# shellcheck source=meta-facebook/meta-minerva/recipes-minerva/plat-tool/files/minerva-common-functions
+source /usr/libexec/minerva-common-functions
 
 uart_mux_select()
 {
@@ -104,7 +86,7 @@ uart_mux_select()
         set_gpio BLADE_UART_SEL2 1
         set_gpio BLADE_UART_SEL3 1
     else
-        echo "uart_mux_select: unknow blade index ($BLADE_INDEX)"
+        logger -p user.info "uart_mux_select: unknow blade index ($BLADE_INDEX)"
         return 1
     fi
 
