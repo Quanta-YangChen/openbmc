@@ -31,8 +31,11 @@ do_install:append() {
         install -m 0744 ${WORKDIR}/select-uart-mux ${D}${bindir}
         for i in ${OBMC_CONSOLE_INST};
         do
-                sed -e "s/{blade_num}/${i}/g" ${WORKDIR}/obmc-console-ttyS0-ssh-mtia-blade-template@.service > ${D}${systemd_system_unitdir}/obmc-console-ttyS0-ssh-mtia-blade${i}@.service
-                sed -e "s/{blade_num}/${i}/g" -e "s/{port_num}/$(expr $i + 2200)/g" ${WORKDIR}/obmc-console-ttyS0-ssh-mtia-blade-tmplate.socket > ${D}${systemd_system_unitdir}/obmc-console-ttyS0-ssh-mtia-blade${i}.socket
+                sed -e "s/{blade_num}/${i}/g" ${WORKDIR}/obmc-console-ttyS0-ssh-mtia-blade-template@.service \
+                > ${D}${systemd_system_unitdir}/obmc-console-ttyS0-ssh-mtia-blade${i}@.service
+                sed -e "s/{blade_num}/${i}/g" -e "s/{port_num}/$(expr $i + 2200)/g" \
+                ${WORKDIR}/obmc-console-ttyS0-ssh-mtia-blade-tmplate.socket \
+                > ${D}${systemd_system_unitdir}/obmc-console-ttyS0-ssh-mtia-blade${i}.socket
         done
 
         # Remove upstream-provided server configuration
