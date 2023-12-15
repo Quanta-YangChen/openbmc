@@ -8,13 +8,9 @@ RDEPENDS:${PN} += "bash"
 
 SRC_URI:append = " file://server.ttyS0.conf \
                    file://client.2200.conf \
-                   file://select-uart-mux"
-
-CLIENT_SERVICE_FILES_FMT = "file://${BPN}-ttyS0-ssh-mtia-blade{0}@.service \
-                            file://${BPN}-ttyS0-ssh-mtia-blade{0}.socket"
-
-
-SRC_URI:append = " ${@compose_list(d, 'CLIENT_SERVICE_FILES_FMT', 'OBMC_CONSOLE_INST')} "
+                   file://select-uart-mux \
+                   file://obmc-console-ttyS0-ssh-mtia-blade-template@.service \
+                   file://obmc-console-ttyS0-ssh-mtia-blade-tmplate.socket"
 
 CLIENT_SERVICE_FMT = "${PN}-ttyS0-ssh-mtia-blade{0}@.service \
                       ${PN}-ttyS0-ssh-mtia-blade{0}.socket"
@@ -32,9 +28,12 @@ do_install:append() {
         # Install the server configuration, service and socket
         install -m 0755 -d ${D}${sysconfdir}/${BPN}
         install -m 0644 ${WORKDIR}/*.conf ${D}${sysconfdir}/${BPN}/
-        install -m 0644 ${WORKDIR}/${BPN}-ttyS0-ssh-mtia-blade*@.service ${D}${systemd_system_unitdir}
-        install -m 0644 ${WORKDIR}/${BPN}-ttyS0-ssh-mtia-blade*.socket ${D}${systemd_system_unitdir}
         install -m 0744 ${WORKDIR}/select-uart-mux ${D}${bindir}
+        for i in ${OBMC_CONSOLE_INST};
+        do
+                sed -e "s/{blade_num}/${i}/g" ${WORKDIR}/obmc-console-ttyS0-ssh-mtia-blade-template@.service > ${D}${systemd_system_unitdir}/obmc-console-ttyS0-ssh-mtia-blade${i}@.service
+                sed -e "s/{blade_num}/${i}/g" -e "s/{port_num}/$(expr $i + 2200)/g" ${WORKDIR}/obmc-console-ttyS0-ssh-mtia-blade-tmplate.socket > ${D}${systemd_system_unitdir}/obmc-console-ttyS0-ssh-mtia-blade${i}.socket
+        done
 
         # Remove upstream-provided server configuration
         rm -f ${D}${sysconfdir}/${BPN}/server.ttyVUART0.conf
