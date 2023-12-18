@@ -1,19 +1,67 @@
 [
     {
-        "Name": "PRSNT_FCB_MIDDLE_1_N",
-        "ChipId": "2",
-        "GpioNum": 50,
+        "Name": "PRSNT_FCB_TOP_0_N",
+        "LineName": "PRSNT_FCB_TOP_0_N",
         "EventMon": "BOTH",
         "Targets": {
-            "FALLING": ["blade-present@FCB_MIDDLE_1.service"],
-            "RISING": ["blade-not-present@FCB_MIDDLE_1.service"]
+            "FALLING": ["blade-present@fcb_top_0.service"],
+            "RISING": ["blade-not-present@fcb_top_0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_FCB_TOP_1_N",
+        "LineName": "PRSNT_FCB_TOP_1_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-present@fcb_top_1.service"],
+            "RISING": ["blade-not-present@fcb_top_1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_FCB_MIDDLE_0_N",
+        "LineName": "PRSNT_FCB_MIDDLE_0_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-present@fcb_middle_0.service"],
+            "RISING": ["blade-not-present@fcb_middle_0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_FCB_MIDDLE_1_N",
+        "LineName": "PRSNT_FCB_MIDDLE_1_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-present@fcb_middle_1.service"],
+            "RISING": ["blade-not-present@fcb_middle_1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_FCB_BOTTOM_0_N",
+        "LineName": "PRSNT_FCB_BOTTOM_0_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-present@fcb_bottom_0.service"],
+            "RISING": ["blade-not-present@fcb_bottom_0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_FCB_BOTTOM_1_N",
+        "LineName": "PRSNT_FCB_BOTTOM_1_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-present@fcb_bottom_1.service"],
+            "RISING": ["blade-not-present@fcb_bottom_1.service"]
         },
         "Continue": true
     },
     {
         "Name": "MGMT_SFP_PRSNT_N_R",
-        "ChipId": "2",
-        "GpioNum": 238,
+        "LineName": "MGMT_SFP_PRSNT_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["mgmt-sfp-present.service"],
