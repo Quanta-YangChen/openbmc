@@ -1,7 +1,5 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-PACKAGECONFIG:append = " use-lamp-test"
-
 SRC_URI += " \
     file://led-group-config.json \
     "
