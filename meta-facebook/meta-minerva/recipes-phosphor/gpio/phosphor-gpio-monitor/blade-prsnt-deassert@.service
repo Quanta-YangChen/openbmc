@@ -1,0 +1,6 @@
+[Unit]
+Description=Blade %i Present Deassert
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/phosphor-gpio-monitor/logging.sh blade_prsnt 1 %i 

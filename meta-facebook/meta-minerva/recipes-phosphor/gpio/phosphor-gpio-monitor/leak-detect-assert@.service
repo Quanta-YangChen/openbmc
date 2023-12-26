@@ -1,0 +1,6 @@
+[Unit]
+Description=%i Leak Detect Assert
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/phosphor-gpio-monitor/logging.sh leak_detect 0 %i 

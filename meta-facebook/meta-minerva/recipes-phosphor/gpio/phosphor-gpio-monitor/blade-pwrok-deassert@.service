@@ -1,0 +1,6 @@
+[Unit]
+Description=Blade %i PWROK Deassert
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/phosphor-gpio-monitor/logging.sh blade_pwrok 1 %i 
