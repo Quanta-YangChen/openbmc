@@ -1,0 +1,6 @@
+[Unit]
+Description=%i Cable Present Deassert
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/phosphor-gpio-monitor/logging.sh cable_prsnt 1 %i

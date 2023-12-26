@@ -1,0 +1,6 @@
+[Unit]
+Description=MGMT-SFP TX Fault Deassert
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/phosphor-gpio-monitor/logging.sh mgmt_sfp_tx_fault 0 cmm_blade

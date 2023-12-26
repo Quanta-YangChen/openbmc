@@ -1,0 +1,6 @@
+[Unit]
+Description=RPU Ready Deassert
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/phosphor-gpio-monitor/logging.sh rpu_ready 0 not_applicable

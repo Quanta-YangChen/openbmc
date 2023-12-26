@@ -1,11 +1,231 @@
 [
     {
+        "Name": "PRSNT_MTIA_BLADE0_N",
+        "LineName": "PRSNT_MTIA_BLADE0_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_0.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE1_N",
+        "LineName": "PRSNT_MTIA_BLADE1_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_1.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE2_N",
+        "LineName": "PRSNT_MTIA_BLADE2_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_2.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_2.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE3_N",
+        "LineName": "PRSNT_MTIA_BLADE3_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_3.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_3.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE4_N",
+        "LineName": "PRSNT_MTIA_BLADE4_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_4.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_4.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE5_N",
+        "LineName": "PRSNT_MTIA_BLADE5_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_5.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_5.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE6_N",
+        "LineName": "PRSNT_MTIA_BLADE6_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_6.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_6.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE7_N",
+        "LineName": "PRSNT_MTIA_BLADE7_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_7.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_7.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE8_N",
+        "LineName": "PRSNT_MTIA_BLADE8_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_8.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_8.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE9_N",
+        "LineName": "PRSNT_MTIA_BLADE9_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_9.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_9.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE10_N",
+        "LineName": "PRSNT_MTIA_BLADE10_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_10.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_10.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE11_N",
+        "LineName": "PRSNT_MTIA_BLADE11_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_11.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_11.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE12_N",
+        "LineName": "PRSNT_MTIA_BLADE12_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_12.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_12.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE13_N",
+        "LineName": "PRSNT_MTIA_BLADE13_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_13.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_13.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE14_N",
+        "LineName": "PRSNT_MTIA_BLADE14_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_14.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_14.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_MTIA_BLADE15_N",
+        "LineName": "PRSNT_MTIA_BLADE15_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@mtia_blade_15.service"],
+            "RISING": ["blade-prsnt-deassert@mtia_blade_15.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_NW_BLADE0_N",
+        "LineName": "PRSNT_NW_BLADE0_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@nw_blade_0.service"],
+            "RISING": ["blade-prsnt-deassert@nw_blade_0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_NW_BLADE1_N",
+        "LineName": "PRSNT_NW_BLADE1_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@nw_blade_1.service"],
+            "RISING": ["blade-prsnt-deassert@nw_blade_1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_NW_BLADE2_N",
+        "LineName": "PRSNT_NW_BLADE2_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@nw_blade_2.service"],
+            "RISING": ["blade-prsnt-deassert@nw_blade_2.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_NW_BLADE3_N",
+        "LineName": "PRSNT_NW_BLADE3_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@nw_blade_3.service"],
+            "RISING": ["blade-prsnt-deassert@nw_blade_3.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_NW_BLADE4_N",
+        "LineName": "PRSNT_NW_BLADE4_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@nw_blade_4.service"],
+            "RISING": ["blade-prsnt-deassert@nw_blade_4.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PRSNT_NW_BLADE5_N",
+        "LineName": "PRSNT_NW_BLADE5_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-prsnt-assert@nw_blade_5.service"],
+            "RISING": ["blade-prsnt-deassert@nw_blade_5.service"]
+        },
+        "Continue": true
+    },    
+    {
         "Name": "PRSNT_FCB_TOP_0_N",
         "LineName": "PRSNT_FCB_TOP_0_N",
         "EventMon": "BOTH",
         "Targets": {
-            "FALLING": ["blade-present@fcb_top_0.service"],
-            "RISING": ["blade-not-present@fcb_top_0.service"]
+            "FALLING": ["blade-prsnt-assert@fcb_top_0.service"],
+            "RISING": ["blade-prsnt-deassert@fcb_top_0.service"]
         },
         "Continue": true
     },
@@ -14,8 +234,8 @@
         "LineName": "PRSNT_FCB_TOP_1_N",
         "EventMon": "BOTH",
         "Targets": {
-            "FALLING": ["blade-present@fcb_top_1.service"],
-            "RISING": ["blade-not-present@fcb_top_1.service"]
+            "FALLING": ["blade-prsnt-assert@fcb_top_1.service"],
+            "RISING": ["blade-prsnt-deassert@fcb_top_1.service"]
         },
         "Continue": true
     },
@@ -24,8 +244,8 @@
         "LineName": "PRSNT_FCB_MIDDLE_0_N",
         "EventMon": "BOTH",
         "Targets": {
-            "FALLING": ["blade-present@fcb_middle_0.service"],
-            "RISING": ["blade-not-present@fcb_middle_0.service"]
+            "FALLING": ["blade-prsnt-assert@fcb_mid_0.service"],
+            "RISING": ["blade-prsnt-deassert@fcb_mid_0.service"]
         },
         "Continue": true
     },
@@ -34,8 +254,8 @@
         "LineName": "PRSNT_FCB_MIDDLE_1_N",
         "EventMon": "BOTH",
         "Targets": {
-            "FALLING": ["blade-present@fcb_middle_1.service"],
-            "RISING": ["blade-not-present@fcb_middle_1.service"]
+            "FALLING": ["blade-prsnt-assert@fcb_mid_1.service"],
+            "RISING": ["blade-prsnt-deassert@fcb_mid_1.service"]
         },
         "Continue": true
     },
@@ -44,8 +264,8 @@
         "LineName": "PRSNT_FCB_BOTTOM_0_N",
         "EventMon": "BOTH",
         "Targets": {
-            "FALLING": ["blade-present@fcb_bottom_0.service"],
-            "RISING": ["blade-not-present@fcb_bottom_0.service"]
+            "FALLING": ["blade-prsnt-assert@fcb_bot_0.service"],
+            "RISING": ["blade-prsnt-deassert@fcb_bot_0.service"]
         },
         "Continue": true
     },
@@ -54,18 +274,618 @@
         "LineName": "PRSNT_FCB_BOTTOM_1_N",
         "EventMon": "BOTH",
         "Targets": {
-            "FALLING": ["blade-present@fcb_bottom_1.service"],
-            "RISING": ["blade-not-present@fcb_bottom_1.service"]
+            "FALLING": ["blade-prsnt-assert@fcb_bot_1.service"],
+            "RISING": ["blade-prsnt-deassert@fcb_bot_1.service"]
         },
         "Continue": true
     },
     {
-        "Name": "MGMT_SFP_PRSNT_N_R",
+        "Name": "PWRGD_MTIA_BLADE0_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE0_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade0.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE1_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE1_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade1.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE2_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE2_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade2.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade2.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE3_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE3_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade3.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade3.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE4_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE4_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade4.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade4.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE5_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE5_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade5.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade5.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE6_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE6_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade6.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade6.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE7_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE7_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade7.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade7.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE8_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE8_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade8.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade8.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE9_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE9_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade9.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade9.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE10_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE10_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade10.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade10.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE11_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE11_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade11.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade11.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE12_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE12_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade12.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade12.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE13_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE13_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade13.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade13.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE14_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE14_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade14.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade14.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE15_PWROK",
+        "LineName": "PWRGD_MTIA_BLADE15_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@mtia_blade15.service"],
+            "RISING": ["blade-pwrok-deassert@mtia_blade15.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_NW_BLADE0_PWROK",
+        "LineName": "PWRGD_NW_BLADE0_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@nw_blade0.service"],
+            "RISING": ["blade-pwrok-deassert@nw_blade0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_NW_BLADE1_PWROK",
+        "LineName": "PWRGD_NW_BLADE1_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@nw_blade1.service"],
+            "RISING": ["blade-pwrok-deassert@nw_blade1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_NW_BLADE2_PWROK",
+        "LineName": "PWRGD_NW_BLADE2_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@nw_blade2.service"],
+            "RISING": ["blade-pwrok-deassert@nw_blade2.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_NW_BLADE3_PWROK",
+        "LineName": "PWRGD_NW_BLADE3_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@nw_blade3.service"],
+            "RISING": ["blade-pwrok-deassert@nw_blade3.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_NW_BLADE4_PWROK",
+        "LineName": "PWRGD_NW_BLADE4_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@nw_blade4.service"],
+            "RISING": ["blade-pwrok-deassert@nw_blade4.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_NW_BLADE5_PWROK",
+        "LineName": "PWRGD_NW_BLADE5_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@nw_blade5.service"],
+            "RISING": ["blade-pwrok-deassert@nw_blade5.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_FCB_TOP_0_PWROK",
+        "LineName": "PWRGD_FCB_TOP_0_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@fcb_top0.service"],
+            "RISING": ["blade-pwrok-deassert@fcb_top0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_FCB_TOP_1_PWROK",
+        "LineName": "PWRGD_FCB_TOP_1_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@fcb_top1.service"],
+            "RISING": ["blade-pwrok-deassert@fcb_top1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_FCB_MIDDLE_0_PWROK",
+        "LineName": "PWRGD_FCB_MIDDLE_0_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@fcb_mid0.service"],
+            "RISING": ["blade-pwrok-deassert@fcb_mid0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_FCB_MIDDLE_1_PWROK",
+        "LineName": "PWRGD_FCB_MIDDLE_1_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@fcb_mid1.service"],
+            "RISING": ["blade-pwrok-deassert@fcb_mid1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_FCB_BOTTOM_0_PWROK",
+        "LineName": "PWRGD_FCB_BOTTOM_0_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@fcb_bot0.service"],
+            "RISING": ["blade-pwrok-deassert@fcb_bot0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_FCB_BOTTOM_1_PWROK",
+        "LineName": "PWRGD_FCB_BOTTOM_1_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["blade-pwrok-assert@fcb_bot1.service"],
+            "RISING": ["blade-pwrok-deassert@fcb_bot1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE0_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE0_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade0.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE1_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE1_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade1.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE2_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE2_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade2.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade2.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE3_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE3_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade3.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade3.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE4_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE4_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade4.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade4.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE5_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE5_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade5.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade5.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE6_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE6_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade6.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade6.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE7_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE7_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade7.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade7.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE8_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE8_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade8.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade8.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE9_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE9_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade9.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade9.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE10_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE10_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade10.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade10.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE11_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE11_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade11.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade11.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE12_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE12_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade12.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade12.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE13_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE13_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade13.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade13.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE14_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE14_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade14.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade14.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_MTIA_BLADE15_N",
+        "LineName": "LEAK_DETECT_MTIA_BLADE15_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@mtia_blade15.service"],
+            "RISING": ["leak-detect-deassert@mtia_blade15.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_NW_BLADE0_N",
+        "LineName": "LEAK_DETECT_NW_BLADE0_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@nw_blade0.service"],
+            "RISING": ["leak-detect-deassert@nw_blade0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_NW_BLADE1_N",
+        "LineName": "LEAK_DETECT_NW_BLADE1_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@nw_blade1.service"],
+            "RISING": ["leak-detect-deassert@nw_blade1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_NW_BLADE2_N",
+        "LineName": "LEAK_DETECT_NW_BLADE2_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@nw_blade2.service"],
+            "RISING": ["leak-detect-deassert@nw_blade2.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_NW_BLADE3_N",
+        "LineName": "LEAK_DETECT_NW_BLADE3_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@nw_blade3.service"],
+            "RISING": ["leak-detect-deassert@nw_blade3.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_NW_BLADE4_N",
+        "LineName": "LEAK_DETECT_NW_BLADE4_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@nw_blade4.service"],
+            "RISING": ["leak-detect-deassert@nw_blade4.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "LEAK_DETECT_NW_BLADE5_N",
+        "LineName": "LEAK_DETECT_NW_BLADE5_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@nw_blade5.service"],
+            "RISING": ["leak-detect-deassert@nw_blade5.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "CHASSIS0_LEAK_Q_N",
+        "LineName": "CHASSIS0_LEAK_Q_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@chassis0.service"],
+            "RISING": ["leak-detect-deassert@chassis0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "CHASSIS1_LEAK_Q_N",
+        "LineName": "CHASSIS1_LEAK_Q_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@chassis1.service"],
+            "RISING": ["leak-detect-deassert@chassis1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "RPU_READY",
+        "LineName": "RPU_READY",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["rpu-ready-deassert.service"],
+            "RISING": ["rpu-ready-assert.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "CMM_CABLE_CARTRIDGE_PRSNT_BOT_N",
+        "LineName": "CMM_CABLE_CARTRIDGE_PRSNT_BOT_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["cable-prsnt-assert@cmm_bot.service"],
+            "RISING": ["cable-prsnt-deassert@cmm_bot.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "CMM_CABLE_CARTRIDGE_PRSNT_TOP_N",
+        "LineName": "CMM_CABLE_CARTRIDGE_PRSNT_TOP_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["cable-prsnt-assert@cmm_top.service"],
+            "RISING": ["cable-prsnt-deassert@cmm_top.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "BOT_BCB_CABLE_PRSNT_N",
+        "LineName": "BOT_BCB_CABLE_PRSNT_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["cable-prsnt-assert@bcb_bot.service"],
+            "RISING": ["cable-prsnt-deassert@bcb_bot.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "TOP_BCB_CABLE_PRSNT_N",
+        "LineName": "TOP_BCB_CABLE_PRSNT_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["cable-prsnt-assert@bcb_top.service"],
+            "RISING": ["cable-prsnt-deassert@bcb_top.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "CR_TOGGLE_BOOT_N",
+        "LineName": "CR_TOGGLE_BOOT_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["toggle-switch-assert.service"],
+            "RISING": ["toggle-switch-deassert.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "MGMT_SFP_PRSNT_N",
         "LineName": "MGMT_SFP_PRSNT_N",
         "EventMon": "BOTH",
         "Targets": {
-            "FALLING": ["mgmt-sfp-present.service"],
-            "RISING": ["mgmt-sfp-not-present.service"]
+            "FALLING": ["mgmt-sfp-prsnt-assert.service"],
+            "RISING": ["mgmt-sfp-prsnt-deassert.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "MGMT_SFP_TX_FAULT",
+        "LineName": "MGMT_SFP_TX_FAULT",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["mgmt-sfp-tx-fault-deassert.service"],
+            "RISING": ["mgmt-sfp-tx-fault-assert.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "MGMT_SFP_RX_LOS",
+        "LineName": "MGMT_SFP_RX_LOS",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["mgmt-sfp-rx-los-deassert.service"],
+            "RISING": ["mgmt-sfp-rx-los-assert.service"]
         },
         "Continue": true
     }

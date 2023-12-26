@@ -1,0 +1,6 @@
+[Unit]
+Description=MGMT-SFP Present Assert
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/phosphor-gpio-monitor/logging.sh mgmt_sfp_prsnt 0 cmm_blade

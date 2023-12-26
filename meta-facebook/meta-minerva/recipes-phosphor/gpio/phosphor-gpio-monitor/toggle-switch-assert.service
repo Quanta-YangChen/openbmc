@@ -1,0 +1,6 @@
+[Unit]
+Description=CR Toggle Switch Assert
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/phosphor-gpio-monitor/logging.sh toggle_switch 0 cmm_blade
