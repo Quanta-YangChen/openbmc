@@ -280,8 +280,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE0_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE0_PWROK",
+        "Name": "PWRGD_MTIA_BLADE0_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE0_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade0.service"],
@@ -290,8 +290,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE1_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE1_PWROK",
+        "Name": "PWRGD_MTIA_BLADE1_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE1_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade1.service"],
@@ -300,8 +300,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE2_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE2_PWROK",
+        "Name": "PWRGD_MTIA_BLADE2_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE2_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade2.service"],
@@ -310,8 +310,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE3_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE3_PWROK",
+        "Name": "PWRGD_MTIA_BLADE3_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE3_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade3.service"],
@@ -320,8 +320,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE4_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE4_PWROK",
+        "Name": "PWRGD_MTIA_BLADE4_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE4_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade4.service"],
@@ -330,8 +330,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE5_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE5_PWROK",
+        "Name": "PWRGD_MTIA_BLADE5_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE5_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade5.service"],
@@ -340,8 +340,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE6_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE6_PWROK",
+        "Name": "PWRGD_MTIA_BLADE6_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE6_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade6.service"],
@@ -350,8 +350,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE7_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE7_PWROK",
+        "Name": "PWRGD_MTIA_BLADE7_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE7_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade7.service"],
@@ -360,8 +360,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE8_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE8_PWROK",
+        "Name": "PWRGD_MTIA_BLADE8_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE8_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade8.service"],
@@ -370,8 +370,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE9_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE9_PWROK",
+        "Name": "PWRGD_MTIA_BLADE9_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE9_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade9.service"],
@@ -380,8 +380,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE10_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE10_PWROK",
+        "Name": "PWRGD_MTIA_BLADE10_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE10_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade10.service"],
@@ -390,8 +390,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE11_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE11_PWROK",
+        "Name": "PWRGD_MTIA_BLADE11_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE11_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade11.service"],
@@ -400,8 +400,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE12_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE12_PWROK",
+        "Name": "PWRGD_MTIA_BLADE12_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE12_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade12.service"],
@@ -410,8 +410,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE13_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE13_PWROK",
+        "Name": "PWRGD_MTIA_BLADE13_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE13_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade13.service"],
@@ -420,8 +420,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE14_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE14_PWROK",
+        "Name": "PWRGD_MTIA_BLADE14_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE14_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade14.service"],
@@ -430,8 +430,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_MTIA_BLADE15_PWROK",
-        "LineName": "PWRGD_MTIA_BLADE15_PWROK",
+        "Name": "PWRGD_MTIA_BLADE15_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE15_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@mtia_blade15.service"],
@@ -440,8 +440,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_NW_BLADE0_PWROK",
-        "LineName": "PWRGD_NW_BLADE0_PWROK",
+        "Name": "PWRGD_NW_BLADE0_PWROK_N",
+        "LineName": "PWRGD_NW_BLADE0_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@nw_blade0.service"],
@@ -450,8 +450,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_NW_BLADE1_PWROK",
-        "LineName": "PWRGD_NW_BLADE1_PWROK",
+        "Name": "PWRGD_NW_BLADE1_PWROK_N",
+        "LineName": "PWRGD_NW_BLADE1_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@nw_blade1.service"],
@@ -460,8 +460,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_NW_BLADE2_PWROK",
-        "LineName": "PWRGD_NW_BLADE2_PWROK",
+        "Name": "PWRGD_NW_BLADE2_PWROK_N",
+        "LineName": "PWRGD_NW_BLADE2_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@nw_blade2.service"],
@@ -470,8 +470,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_NW_BLADE3_PWROK",
-        "LineName": "PWRGD_NW_BLADE3_PWROK",
+        "Name": "PWRGD_NW_BLADE3_PWROK_N",
+        "LineName": "PWRGD_NW_BLADE3_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@nw_blade3.service"],
@@ -480,8 +480,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_NW_BLADE4_PWROK",
-        "LineName": "PWRGD_NW_BLADE4_PWROK",
+        "Name": "PWRGD_NW_BLADE4_PWROK_N",
+        "LineName": "PWRGD_NW_BLADE4_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@nw_blade4.service"],
@@ -490,8 +490,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_NW_BLADE5_PWROK",
-        "LineName": "PWRGD_NW_BLADE5_PWROK",
+        "Name": "PWRGD_NW_BLADE5_PWROK_N",
+        "LineName": "PWRGD_NW_BLADE5_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@nw_blade5.service"],
@@ -500,8 +500,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_FCB_TOP_0_PWROK",
-        "LineName": "PWRGD_FCB_TOP_0_PWROK",
+        "Name": "PWRGD_FCB_TOP_0_PWROK_N",
+        "LineName": "PWRGD_FCB_TOP_0_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@fcb_top0.service"],
@@ -510,8 +510,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_FCB_TOP_1_PWROK",
-        "LineName": "PWRGD_FCB_TOP_1_PWROK",
+        "Name": "PWRGD_FCB_TOP_1_PWROK_N",
+        "LineName": "PWRGD_FCB_TOP_1_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@fcb_top1.service"],
@@ -520,8 +520,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_FCB_MIDDLE_0_PWROK",
-        "LineName": "PWRGD_FCB_MIDDLE_0_PWROK",
+        "Name": "PWRGD_FCB_MIDDLE_0_PWROK_N",
+        "LineName": "PWRGD_FCB_MIDDLE_0_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@fcb_mid0.service"],
@@ -530,8 +530,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_FCB_MIDDLE_1_PWROK",
-        "LineName": "PWRGD_FCB_MIDDLE_1_PWROK",
+        "Name": "PWRGD_FCB_MIDDLE_1_PWROK_N",
+        "LineName": "PWRGD_FCB_MIDDLE_1_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@fcb_mid1.service"],
@@ -540,8 +540,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_FCB_BOTTOM_0_PWROK",
-        "LineName": "PWRGD_FCB_BOTTOM_0_PWROK",
+        "Name": "PWRGD_FCB_BOTTOM_0_PWROK_N",
+        "LineName": "PWRGD_FCB_BOTTOM_0_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@fcb_bot0.service"],
@@ -550,8 +550,8 @@
         "Continue": true
     },
     {
-        "Name": "PWRGD_FCB_BOTTOM_1_PWROK",
-        "LineName": "PWRGD_FCB_BOTTOM_1_PWROK",
+        "Name": "PWRGD_FCB_BOTTOM_1_PWROK_N",
+        "LineName": "PWRGD_FCB_BOTTOM_1_PWROK_N",
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["blade-pwrok-assert@fcb_bot1.service"],
