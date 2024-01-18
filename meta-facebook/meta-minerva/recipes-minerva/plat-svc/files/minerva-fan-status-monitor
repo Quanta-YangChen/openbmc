@@ -1,0 +1,92 @@
+#!/bin/bash -e
+# shellcheck source=meta-facebook/meta-minerva/recipes-minerva/plat-tool/files/minerva-common-functions
+source /usr/libexec/minerva-common-functions
+
+FAN_FAULT_UNKNOW="Unknow"
+FAN_FAULT_ASSERT="Assert"
+FAN_FAULT_DEASSERT="Deassert"
+
+set_fan_fault_led()
+{
+    local service="xyz.openbmc_project.LED.GroupManager"
+    local object_path="/xyz/openbmc_project/led/groups/fan_fault"
+    local interface="xyz.openbmc_project.Led.Group"
+    local property="Asserted"
+
+    busctl set-property "$service" "$object_path" "$interface" "$property" b "$1"
+}
+
+check_fcb_fan_fault()
+{
+    local fcb_num=$1
+    case $fcb_num in
+        0)
+            fan_name_prefix="FCB_BOT_0"
+            ;;
+        1)
+            fan_name_prefix="FCB_BOT_1"
+            ;;
+        2)
+            fan_name_prefix="FCB_MID_0"
+            ;;
+        3)
+            fan_name_prefix="FCB_MID_1"
+            ;;
+        4)
+            fan_name_prefix="FCB_TOP_0"
+            ;;
+        5)
+            fan_name_prefix="FCB_TOP_1"
+            ;;
+        *) 
+            logger -p user.info "check_fcb_fan_fault: Invalid fcb_num ${fcb_num}"
+            echo "$FAN_FAULT_UNKNOW"
+            return 1
+            ;;
+    esac
+
+    local service="xyz.openbmc_project.FanSensor"
+    local interface="xyz.openbmc_project.Sensor.Threshold.Critical"
+    local property_list=("CriticalAlarmHigh" "CriticalAlarmLow")
+
+    for index in {0..7}
+    do
+        local object_path="/xyz/openbmc_project/sensors/fan_tach/${fan_name_prefix}_FAN${index}_TACH"
+        for property in "${property_list[@]}"; do
+            tach_alarm=$(busctl get-property "$service" "$object_path" "$interface" "$property" | cut -d ' ' -f2)
+            if [ "$tach_alarm" = "true" ]; then
+                echo "$FAN_FAULT_ASSERT"
+                return 0
+            fi
+        done
+    done
+
+    echo "$FAN_FAULT_DEASSERT"
+    return 0
+}
+
+while true
+do
+    fcb_prsnt_reg=$(i2cget -f -y 0x00 0x15 0x01)
+
+    for i in {0..5}
+    do
+        ret_val=$FAN_FAULT_UNKNOW
+        if (( (fcb_prsnt_reg & (1 << i)) != 0 )); then
+            # FCB not present
+            set_fan_fault_led "true"
+            break
+        else
+            ret_val=$(check_fcb_fan_fault "$i")
+            if [ "$ret_val" = "$FAN_FAULT_ASSERT" ]; then
+                set_fan_fault_led "true"
+                break
+            fi
+        fi
+    done
+
+    if [ "$i" = 5 ] && [ "$ret_val" = $FAN_FAULT_DEASSERT ]; then
+        set_fan_fault_led "false"
+    fi
+    sleep 1
+done
