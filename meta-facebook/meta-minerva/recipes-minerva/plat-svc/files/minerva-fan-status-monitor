@@ -6,6 +6,27 @@ FAN_FAULT_UNKNOW="Unknow"
 FAN_FAULT_ASSERT="Assert"
 FAN_FAULT_DEASSERT="Deassert"
 
+if [ ! -d ~/test ]; then
+    mkdir ~/test
+fi
+
+echo "0x00" > ~/test/prsnt.txt
+for i in {0..7}
+do
+    echo "b false" > ~/test/FCB_BOT_0_${i}_CriticalAlarmHigh
+    echo "b false" > ~/test/FCB_BOT_0_${i}_CriticalAlarmLow
+    echo "b false" > ~/test/FCB_BOT_1_${i}_CriticalAlarmHigh
+    echo "b false" > ~/test/FCB_BOT_1_${i}_CriticalAlarmLow
+    echo "b false" > ~/test/FCB_MID_0_${i}_CriticalAlarmHigh
+    echo "b false" > ~/test/FCB_MID_0_${i}_CriticalAlarmLow
+    echo "b false" > ~/test/FCB_MID_1_${i}_CriticalAlarmHigh
+    echo "b false" > ~/test/FCB_MID_1_${i}_CriticalAlarmLow
+    echo "b false" > ~/test/FCB_TOP_0_${i}_CriticalAlarmHigh
+    echo "b false" > ~/test/FCB_TOP_0_${i}_CriticalAlarmLow
+    echo "b false" > ~/test/FCB_TOP_1_${i}_CriticalAlarmHigh
+    echo "b false" > ~/test/FCB_TOP_1_${i}_CriticalAlarmLow
+done
+
 set_fan_fault_led()
 {
     local service="xyz.openbmc_project.LED.GroupManager"
@@ -13,6 +34,7 @@ set_fan_fault_led()
     local interface="xyz.openbmc_project.Led.Group"
     local property="Asserted"
 
+    logger -p user.info "fan monitor: set_fan_fault_led $1"
     busctl set-property "$service" "$object_path" "$interface" "$property" b "$1"
 }
 
@@ -53,30 +75,36 @@ check_fcb_fan_fault()
     do
         local object_path="/xyz/openbmc_project/sensors/fan_tach/${fan_name_prefix}_FAN${index}_TACH"
         for property in "${property_list[@]}"; do
-            tach_alarm=$(busctl get-property "$service" "$object_path" "$interface" "$property" | cut -d ' ' -f2)
+            local test_path="~/test/${fan_name_prefix}_${index}_$property"
+            tach_alarm=$(cat ~/test/${fan_name_prefix}_${index}_$property | cut -d ' ' -f2)
             if [ "$tach_alarm" = "true" ]; then
+                logger -p user.info "fan monitor: $test_path alarm"
                 echo "$FAN_FAULT_ASSERT"
                 return 0
             fi
         done
     done
 
+    logger -p user.info "fan monitor: $fan_name_prefix pass"
     echo "$FAN_FAULT_DEASSERT"
     return 0
 }
 
 while true
 do
-    fcb_prsnt_reg=$(i2cget -f -y 0x00 0x15 0x01)
+    # fcb_prsnt_reg=$(i2cget -f -y 0x00 0x15 0x01)
+    fcb_prsnt_reg=`cat ~/test/prsnt.txt`
 
     for i in {0..5}
     do
         ret_val=$FAN_FAULT_UNKNOW
         if (( (fcb_prsnt_reg & (1 << i)) != 0 )); then
             # FCB not present
+            logger -p user.info "fan monitor: $i not present"
             set_fan_fault_led "true"
             break
         else
+            logger -p user.info "fan monitor: $i present"
             ret_val=$(check_fcb_fan_fault "$i")
             if [ "$ret_val" = "$FAN_FAULT_ASSERT" ]; then
                 set_fan_fault_led "true"
@@ -86,6 +114,7 @@ do
     done
 
     if [ "$i" = 5 ] && [ "$ret_val" = $FAN_FAULT_DEASSERT ]; then
+        logger -p user.info "fan monitor: all pass, deassert"
         set_fan_fault_led "false"
     fi
     sleep 1
