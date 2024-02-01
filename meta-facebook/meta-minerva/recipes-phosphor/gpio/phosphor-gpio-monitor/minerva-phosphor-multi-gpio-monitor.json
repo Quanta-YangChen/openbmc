@@ -858,6 +858,226 @@
         "Continue": true
     },
     {
+        "Name": "PWRGD_MTIA_BLADE0_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE0_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-0.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE1_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE1_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-1.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE2_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE2_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-2.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-2.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE3_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE3_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-3.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-3.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE4_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE4_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-4.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-4.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE5_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE5_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-5.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-5.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE6_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE6_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-6.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-6.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE7_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE7_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-7.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-7.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE8_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE8_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-8.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-8.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE9_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE9_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-9.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-9.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE10_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE10_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-10.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-10.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE11_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE11_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-11.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-11.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE12_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE12_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-12.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-12.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE13_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE13_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-13.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-13.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE14_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE14_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-14.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-14.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_MTIA_BLADE15_HSC_PWROK_N",
+        "LineName": "PWRGD_MTIA_BLADE15_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@mtia-blade-15.service"],
+            "RISING": ["hsc-power-good-deassert@mtia-blade-15.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_NW_BLADE0_HSC_PWROK_N",
+        "LineName": "PWRGD_NW_BLADE0_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@network-blade-0.service"],
+            "RISING": ["hsc-power-good-deassert@network-blade-0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_NW_BLADE1_HSC_PWROK_N",
+        "LineName": "PWRGD_NW_BLADE1_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@network-blade-1.service"],
+            "RISING": ["hsc-power-good-deassert@network-blade-1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_NW_BLADE2_HSC_PWROK_N",
+        "LineName": "PWRGD_NW_BLADE2_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@network-blade-2.service"],
+            "RISING": ["hsc-power-good-deassert@network-blade-2.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_NW_BLADE3_HSC_PWROK_N",
+        "LineName": "PWRGD_NW_BLADE3_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@network-blade-3.service"],
+            "RISING": ["hsc-power-good-deassert@network-blade-3.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_NW_BLADE4_HSC_PWROK_N",
+        "LineName": "PWRGD_NW_BLADE4_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@network-blade-4.service"],
+            "RISING": ["hsc-power-good-deassert@network-blade-4.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "PWRGD_NW_BLADE5_HSC_PWROK_N",
+        "LineName": "PWRGD_NW_BLADE5_HSC_PWROK_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["hsc-power-good-assert@network-blade-5.service"],
+            "RISING": ["hsc-power-good-deassert@network-blade-5.service"]
+        },
+        "Continue": true
+    },
+    {
         "Name": "RPU_READY",
         "ChipId": "2",
         "GpioNum": 200,

@@ -1,0 +1,7 @@
+[Unit]
+Description=%i HSC Power Good Status Deassert
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/phosphor-gpio-monitor/logging "%i hsc power good deassert" "BLADE" "%i"
+SyslogIdentifier=%i-hsc-power-good-deassert

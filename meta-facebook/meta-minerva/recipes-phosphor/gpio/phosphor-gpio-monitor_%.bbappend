@@ -14,6 +14,8 @@ SERVICE_LIST = "present-assert@.service \
                 cable-present-deassert@.service \
                 sfp-present-assert.service \
                 sfp-present-deassert.service \
+                hsc-power-good-assert@.service \
+                hsc-power-good-deassert@.service \
                 "
 
 SERVICE_FILE_FMT = "file://{0}"
