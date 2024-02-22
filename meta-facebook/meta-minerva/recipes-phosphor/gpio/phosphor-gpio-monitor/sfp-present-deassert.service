@@ -4,4 +4,5 @@ Description=MGMT SFP Present Deassert
 [Service]
 Type=oneshot
 ExecStart=/usr/libexec/phosphor-gpio-monitor/sfp-present-check 1
+ExecStart=/usr/libexec/phosphor-gpio-monitor/logging "SFP present deassert" "BLADE" "CMM"
 SyslogIdentifier=sfp-present-deassert
