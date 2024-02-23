@@ -1,9 +1,12 @@
 #!/bin/bash
+
 # shellcheck source=meta-facebook/meta-minerva/recipes-minerva/plat-tool/files/minerva-common-functions
 source /usr/libexec/minerva-common-functions
 
 if [ "$1" == "0" ]; then
     set_gpio MGMT_SFP_TX_DIS 0
+    /usr/libexec/phosphor-gpio-monitor/logging "SFP present assert" "BLADE" "CMM"
 else
     set_gpio MGMT_SFP_TX_DIS 1
+    /usr/libexec/phosphor-gpio-monitor/logging "SFP present deassert" "BLADE" "CMM"
 fi
