@@ -1166,6 +1166,28 @@
         "Continue": true
     },
     {
+        "Name": "CHASSIS0_LEAK_Q_N",
+        "ChipId": "2",
+        "GpioNum": 230,
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@chassis0.service"],
+            "RISING": ["leak-detect-deassert@chassis0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "CHASSIS1_LEAK_Q_N",
+        "ChipId": "2",
+        "GpioNum": 232,
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["leak-detect-assert@chassis1.service"],
+            "RISING": ["leak-detect-deassert@chassis1.service"]
+        },
+        "Continue": true
+    },
+    {
         "Name": "MGMT_SFP_PRSNT_N",
         "ChipId": "2",
         "GpioNum": 238,
