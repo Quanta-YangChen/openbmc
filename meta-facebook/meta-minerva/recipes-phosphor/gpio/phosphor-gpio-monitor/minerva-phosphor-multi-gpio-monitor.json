@@ -1166,9 +1166,9 @@
         "Continue": true
     },
     {
-        "Name": "CHASSIS0_LEAK_Q_N",
+        "Name": "CHASSIS_LEAK0_DETECT_N",
         "ChipId": "2",
-        "GpioNum": 230,
+        "GpioNum": 234,
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["leak-detect-assert@chassis0.service"],
@@ -1177,9 +1177,9 @@
         "Continue": true
     },
     {
-        "Name": "CHASSIS1_LEAK_Q_N",
+        "Name": "CHASSIS_LEAK1_DETECT_N",
         "ChipId": "2",
-        "GpioNum": 232,
+        "GpioNum": 236,
         "EventMon": "BOTH",
         "Targets": {
             "FALLING": ["leak-detect-assert@chassis1.service"],
