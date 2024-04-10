@@ -91,4 +91,17 @@ set_gpio RST_I2CRST_FCB_T_R_N 1
 set_gpio wFM_88E6393X_BIN_UPDATE_EN_N 1
 set_gpio WATER_VALVE_CLOSED_N 0
 set_gpio BMC_READY 1
+
+# Define GPIO names and values
+# gpio_prefix=("FCB_TOP0" "FCB_TOP1" "FCB_MID0" "FCB_MID1" "FCB_BOT0" "FCB_BOT1")
+gpio_prefix=("FCB_MID1")
+fan_numbers=("FAN0" "FAN1" "FAN2" "FAN3")
+
+# Loop through each prefix and fan number to set GPIO
+for prefix in "${gpio_prefix[@]}"; do
+    for fan in "${fan_numbers[@]}"; do
+        set_gpio "${prefix}_${fan}_PWREN" 1
+    done
+done
+
 exit 0
