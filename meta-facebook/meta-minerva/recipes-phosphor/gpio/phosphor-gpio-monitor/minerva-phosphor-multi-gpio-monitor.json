@@ -1197,5 +1197,49 @@
             "RISING": ["sfp-present-deassert.service"]
         },
         "Continue": true
+    },
+    {
+        "Name": "FCB_MID1_FAN0_PRSNT",
+        "ChipId": "4",
+        "GpioNum": 8,
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["present-deassert@fcb_mid1_fan0.service"],
+            "RISING": ["present-assert@fcb_mid1_fan0.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "FCB_MID1_FAN0_PRSNT",
+        "ChipId": "4",
+        "GpioNum": 9,
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["present-deassert@fcb_mid1_fan1.service"],
+            "RISING": ["present-assert@fcb_mid1_fan1.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "FCB_MID1_FAN0_PRSNT",
+        "ChipId": "4",
+        "GpioNum": 10,
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["present-deassert@fcb_mid1_fan2.service"],
+            "RISING": ["present-assert@fcb_mid1_fan2.service"]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "FCB_MID1_FAN0_PRSNT",
+        "ChipId": "4",
+        "GpioNum": 11,
+        "EventMon": "BOTH",
+        "Targets": {
+            "FALLING": ["present-deassert@fcb_mid1_fan3.service"],
+            "RISING": ["present-assert@fcb_mid1_fan3.service"]
+        },
+        "Continue": true
     }
 ]
