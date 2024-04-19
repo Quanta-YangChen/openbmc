@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Set chassis0 RequestedPowerTransition to On 
+busctl set-property xyz.openbmc_project.State.Chassis0 /xyz/openbmc_project/state/chassis0 xyz.openbmc_project.State.Chassis RequestedPowerTransition s xyz.openbmc_project.State.Chassis.Transition.On
