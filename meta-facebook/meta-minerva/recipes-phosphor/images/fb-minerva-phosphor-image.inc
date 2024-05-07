@@ -27,3 +27,8 @@ OBMC_IMAGE_EXTRA_INSTALL:append = " \
 OBMC_IMAGE_EXTRA_INSTALL:append = " \
     phosphor-sel-logger \
 "
+
+# Enable mdio tool
+OBMC_IMAGE_EXTRA_INSTALL:append = " \
+    mdio-tools \
+"
