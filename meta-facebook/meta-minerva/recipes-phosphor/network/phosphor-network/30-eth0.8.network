@@ -1,0 +1,9 @@
+[Match]
+Name=eth0.8
+[Network]
+DHCPServer=yes
+[Address]
+Address=192.168.8.1/24
+[DHCPServer]
+PoolOffset=10
+PoolSize=1

@@ -1,0 +1,5 @@
+[NetDev]
+Name=eth0.8
+Kind=vlan
+[VLAN]
+Id=8

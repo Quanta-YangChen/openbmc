@@ -31,3 +31,12 @@ OBMC_IMAGE_EXTRA_INSTALL:append = " \
 OBMC_IMAGE_EXTRA_INSTALL:append = " \
     phosphor-state-manager \
 "
+
+OBMC_IMAGE_EXTRA_INSTALL:append = " \
+    mdio-tools \
+"
+
+OBMC_IMAGE_EXTRA_INSTALL:append = " \
+    libftdi \
+    ftdi-eeprom \
+"
