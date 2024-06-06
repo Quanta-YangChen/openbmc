@@ -97,5 +97,9 @@ set_gpio WATER_VALVE_CLOSED_N 0
 set_gpio BMC_READY 1
 
 power_on_led_init
+ 
+# add network interface 
+ip link add link eth0 name eth0.7 type vlan id 7 
+ip link add link eth0 name eth0.8 type vlan id 8 
 
 exit 0
